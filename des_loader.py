@@ -81,6 +81,6 @@ def des_load(my_url, *id_kargs):
         except Exception as e:
             print(str(e))
             print("Retry: {}".format(counter))
-des_load(r'http://www.youtube.com/watch?v=HpZBnc07q9o', 'watch-uploader-info', 'eow-description', 'eow-title', 'content watch-info-tag-list')
+des_load(r'https://www.youtube.com/watch?v=xuB1Id2Wxak', 'watch-uploader-info', 'eow-description', 'eow-title', 'content watch-info-tag-list')
 
 
