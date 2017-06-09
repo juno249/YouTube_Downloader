@@ -4,7 +4,7 @@ from urllib import request
 
 def des_load(my_url, *id_kargs):
     counter = 0
-    while counter < 10:
+    while counter < 1:
         counter += 1
         try:
             #proxies = {'http': 'http://www.someproxy.com:3128'}
@@ -15,9 +15,9 @@ def des_load(my_url, *id_kargs):
             #print(soup.prettify())
             #for link in soup.find_all('a'):
             #    print(link.get_text(), link.get('href'))
+
             publish_date = soup.find(id = id_kargs[0]).get_text()
             description = soup.find(id = id_kargs[1])
-
             
             video_title = soup.find(id = id_kargs[2]).get_text()
             video_words = video_title.split()
@@ -81,6 +81,6 @@ def des_load(my_url, *id_kargs):
         except Exception as e:
             print(str(e))
             print("Retry: {}".format(counter))
-des_load(r'https://www.youtube.com/watch?v=du7lkPPIPbo', 'watch-uploader-info', 'eow-description', 'eow-title', 'content watch-info-tag-list')
+des_load(r'http://www.youtube.com/watch?v=HpZBnc07q9o', 'watch-uploader-info', 'eow-description', 'eow-title', 'content watch-info-tag-list')
 
 
